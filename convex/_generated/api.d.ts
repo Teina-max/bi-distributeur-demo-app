@@ -108,6 +108,7 @@ import type * as search_buckets from "../search/buckets.js";
 import type * as search_dto_clientSearch from "../search/dto/clientSearch.js";
 import type * as search_dto_productSearch from "../search/dto/productSearch.js";
 import type * as search_queries from "../search/queries.js";
+import type * as seeds_additionalClients from "../seeds/additionalClients.js";
 import type * as seeds_catalog from "../seeds/catalog.js";
 import type * as seeds_data_clients from "../seeds/data/clients.js";
 import type * as seeds_data_products from "../seeds/data/products.js";
@@ -244,6 +245,7 @@ declare const fullApi: ApiFromModules<{
   "search/dto/clientSearch": typeof search_dto_clientSearch;
   "search/dto/productSearch": typeof search_dto_productSearch;
   "search/queries": typeof search_queries;
+  "seeds/additionalClients": typeof seeds_additionalClients;
   "seeds/catalog": typeof seeds_catalog;
   "seeds/data/clients": typeof seeds_data_clients;
   "seeds/data/products": typeof seeds_data_products;

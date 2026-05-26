@@ -76,7 +76,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "7 Rue du Marché",
       postal_code: "06137",
-      city: "Porto-Vecchio",
+      city: "Hyères",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -86,7 +86,7 @@ export const CLIENTS: readonly SeedClient[] = [
     code: "C005013",
     name: "RESTAURANT DE LA TERRASSE",
     type: "Pro-CHR",
-    email: "nepita@wanadoo.fr",
+    email: "terrasse@wanadoo.fr",
     phone: "+33 4 93 26 75 68",
     address: {
       street: "4 Avenue du Premier Consul",
@@ -106,7 +106,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Quai des Martyrs",
       postal_code: "06260",
-      city: "Calvi",
+      city: "Cannes",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -121,7 +121,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Route de la Citadelle",
       postal_code: "06260",
-      city: "Calvi",
+      city: "Cannes",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -146,12 +146,12 @@ export const CLIENTS: readonly SeedClient[] = [
     code: "C009320",
     name: "RESTAURANT LE PERGOLA",
     type: "Pro-CHR",
-    email: "pergola.bonifacio@gmail.com",
+    email: "pergola.antibes@gmail.com",
     phone: "+33 4 93 73 00 88",
     address: {
       street: "Rue Saint-Erasme",
       postal_code: "06169",
-      city: "Bonifacio",
+      city: "Antibes",
       country: "FR",
     },
     payment_terms_days: 45,
@@ -166,7 +166,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Place du Marché",
       postal_code: "06250",
-      city: "Corte",
+      city: "Grasse",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -181,7 +181,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Place des Portes",
       postal_code: "06217",
-      city: "Saint-Florent",
+      city: "Sanary",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -196,7 +196,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Avenue Napoléon III",
       postal_code: "06110",
-      city: "Propriano",
+      city: "Bandol",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -211,7 +211,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Cours Paoli",
       postal_code: "06220",
-      city: "L'Île-Rousse",
+      city: "Menton",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -219,14 +219,14 @@ export const CLIENTS: readonly SeedClient[] = [
   },
   {
     code: "C014722",
-    name: "RESTAURANT U GATTIVU",
+    name: "RESTAURANT DU CIGALON",
     type: "Pro-CHR",
-    email: "ugattivu@orange.fr",
+    email: "cigalon@orange.fr",
     phone: "+33 4 93 77 09 58",
     address: {
       street: "Place de la Libération",
       postal_code: "06100",
-      city: "Sartène",
+      city: "Carry",
       country: "FR",
     },
     payment_terms_days: 45,
@@ -264,14 +264,14 @@ export const CLIENTS: readonly SeedClient[] = [
   },
   {
     code: "C017501",
-    name: "SNACK U FILU",
+    name: "SNACK DU VIEUX MOULIN",
     type: "Pro-CHR",
     email: null,
     phone: null,
     address: {
       street: "Route Nationale 196",
       postal_code: "06137",
-      city: "Porto-Vecchio",
+      city: "Hyères",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -296,12 +296,12 @@ export const CLIENTS: readonly SeedClient[] = [
     code: "C019633",
     name: "RESTAURANT LE MAQUIS",
     type: "Pro-CHR",
-    email: "lemaquis.propriano@gmail.com",
+    email: "lemaquis.bandol@gmail.com",
     phone: "+33 4 93 76 15 02",
     address: {
       street: "Rue du Général de Gaulle",
       postal_code: "06110",
-      city: "Propriano",
+      city: "Bandol",
       country: "FR",
     },
     payment_terms_days: 45,
@@ -316,7 +316,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Promenade de l'Île-Rousse",
       postal_code: "06220",
-      city: "L'Île-Rousse",
+      city: "Menton",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -331,7 +331,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Rue César Campinchi",
       postal_code: "06250",
-      city: "Corte",
+      city: "Grasse",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -339,14 +339,14 @@ export const CLIENTS: readonly SeedClient[] = [
   },
   {
     code: "C022590",
-    name: "BAR BRASSERIE U POZZU",
+    name: "BAR BRASSERIE LE PUITS",
     type: "Pro-CHR",
     email: null,
     phone: "+33 4 93 73 56 31",
     address: {
       street: "Rue du Commerce",
       postal_code: "06169",
-      city: "Bonifacio",
+      city: "Antibes",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -354,14 +354,14 @@ export const CLIENTS: readonly SeedClient[] = [
   },
   {
     code: "C023811",
-    name: "RESTAURANT A VOLTA",
+    name: "RESTAURANT DU MOULIN",
     type: "Pro-CHR",
     email: "avolta@sfr.fr",
     phone: "+33 4 93 37 10 90",
     address: {
       street: "Lieu-dit A Volta",
       postal_code: "06217",
-      city: "Saint-Florent",
+      city: "Sanary",
       country: "FR",
     },
     payment_terms_days: 45,
@@ -376,7 +376,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Port de Plaisance",
       postal_code: "06260",
-      city: "Calvi",
+      city: "Cannes",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -384,14 +384,14 @@ export const CLIENTS: readonly SeedClient[] = [
   },
   {
     code: "C025300",
-    name: "CAFE U CAMPANILE",
+    name: "CAFE LE CAMPANILE",
     type: "Pro-CHR",
     email: null,
     phone: "+33 4 93 77 34 08",
     address: {
       street: "Place Porta",
       postal_code: "06100",
-      city: "Sartène",
+      city: "Carry",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -438,7 +438,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Route de Palombaggia",
       postal_code: "06137",
-      city: "Porto-Vecchio",
+      city: "Hyères",
       country: "FR",
     },
     payment_terms_days: 45,
@@ -468,7 +468,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Route de la Forêt",
       postal_code: "06260",
-      city: "Calvi",
+      city: "Cannes",
       country: "FR",
     },
     payment_terms_days: 60,
@@ -483,7 +483,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Lieu-dit Rondinara",
       postal_code: "06169",
-      city: "Bonifacio",
+      city: "Antibes",
       country: "FR",
     },
     payment_terms_days: 45,
@@ -513,7 +513,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Boulevard Pierre Pasquini",
       postal_code: "06220",
-      city: "L'Île-Rousse",
+      city: "Menton",
       country: "FR",
     },
     payment_terms_days: 45,
@@ -521,14 +521,14 @@ export const CLIENTS: readonly SeedClient[] = [
   },
   {
     code: "C033962",
-    name: "RESIDENCE SOLEIL DE PROPRIANO",
+    name: "RESIDENCE SOLEIL DE BANDOL",
     type: "Pro-Entreprise",
-    email: "contact@soleil-propriano.fr",
+    email: "contact@soleil-bandol.fr",
     phone: "+33 4 93 76 07 33",
     address: {
       street: "Rue Jean Jeannin",
       postal_code: "06110",
-      city: "Propriano",
+      city: "Bandol",
       country: "FR",
     },
     payment_terms_days: 45,
@@ -543,7 +543,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Vallée de la Restonica",
       postal_code: "06250",
-      city: "Corte",
+      city: "Grasse",
       country: "FR",
     },
     payment_terms_days: 60,
@@ -620,7 +620,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Avenue du Général de Gaulle",
       postal_code: "06137",
-      city: "Porto-Vecchio",
+      city: "Hyères",
       country: "FR",
     },
     payment_terms_days: 60,
@@ -667,7 +667,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Lotissement Santa Lina",
       postal_code: "06137",
-      city: "Porto-Vecchio",
+      city: "Hyères",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -682,7 +682,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Avenue de la République",
       postal_code: "06260",
-      city: "Calvi",
+      city: "Cannes",
       country: "FR",
     },
     payment_terms_days: 45,
@@ -712,7 +712,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Route de Patrimonio",
       postal_code: "06217",
-      city: "Saint-Florent",
+      city: "Sanary",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -727,7 +727,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Cours Paoli",
       postal_code: "06250",
-      city: "Corte",
+      city: "Grasse",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -735,14 +735,14 @@ export const CLIENTS: readonly SeedClient[] = [
   },
   {
     code: "C048556",
-    name: "DELI MEDITERRANEE SARTENE",
+    name: "DELI MEDITERRANEE CARRY",
     type: "Revendeur",
     email: "delicorsica@orange.fr",
     phone: "+33 4 93 77 18 53",
     address: {
       street: "Rue des Frères Versini",
       postal_code: "06100",
-      city: "Sartène",
+      city: "Carry",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -759,7 +759,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Domaine du Sperone",
       postal_code: "06169",
-      city: "Bonifacio",
+      city: "Antibes",
       country: "FR",
     },
     payment_terms_days: 45,
@@ -819,7 +819,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "8 Avenue Xavier Luciani",
       postal_code: "06250",
-      city: "Corte",
+      city: "Grasse",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -834,7 +834,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Place Christophe Colomb",
       postal_code: "06260",
-      city: "Calvi",
+      city: "Cannes",
       country: "FR",
     },
     payment_terms_days: 30,
@@ -847,9 +847,9 @@ export const CLIENTS: readonly SeedClient[] = [
     email: "mediterranee-nautic@gmail.com",
     phone: "+33 4 93 76 31 09",
     address: {
-      street: "Marina de Propriano",
+      street: "Marina de Bandol",
       postal_code: "06110",
-      city: "Propriano",
+      city: "Bandol",
       country: "FR",
     },
     payment_terms_days: 45,
@@ -911,7 +911,7 @@ export const CLIENTS: readonly SeedClient[] = [
     address: {
       street: "Route d'Olmeto",
       postal_code: "06100",
-      city: "Sartène",
+      city: "Carry",
       country: "FR",
     },
     payment_terms_days: 0,

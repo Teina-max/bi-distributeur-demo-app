@@ -21,8 +21,8 @@ export const SignInCredentialsAndEmailOTP = (props: {
               Créez-en un en 10 secondes
             </Link>{" "}
             avec n'importe quel email + un mot de passe — vous arrivez direct
-            sur le dashboard avec 17 ans de données fictives à explorer.
-            L'envoi d'OTP par email n'est pas activé sur cette démo.
+            sur le dashboard avec 17 ans de données fictives à explorer. L'envoi
+            d'OTP par email n'est pas activé sur cette démo.
           </Typography>
         </div>
       ) : null}
