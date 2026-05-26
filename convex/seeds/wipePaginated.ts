@@ -74,9 +74,11 @@ export const deleteBatch = internalMutation({
     if (indexedTables.has(table as TableName)) {
       const rows = await ctx.db
         .query(table as TableName)
-        // @ts-expect-error -- dynamic table name; we know the index exists for indexedTables members
-        .withIndex("by_organization_and_creation", (q) =>
-          q.eq("organization_id", TOSCANA_ORG_ID),
+        .withIndex(
+          // @ts-expect-error -- dynamic table; index exists on each indexedTables member
+          "by_organization_and_creation",
+          // @ts-expect-error -- dynamic table; org column exists on each indexedTables member
+          (q) => q.eq("organization_id", TOSCANA_ORG_ID),
         )
         .take(BATCH);
       for (const row of rows) {
@@ -101,9 +103,11 @@ export const deleteBatch = internalMutation({
     if (table === "clients" || table === "products" || table === "suppliers") {
       const rows = await ctx.db
         .query(table as TableName)
-        // @ts-expect-error -- dynamic table name; by_organization exists on clients/products/suppliers
-        .withIndex("by_organization", (q) =>
-          q.eq("organization_id", TOSCANA_ORG_ID),
+        .withIndex(
+          // @ts-expect-error -- dynamic table; by_organization exists on these 3 tables
+          "by_organization",
+          // @ts-expect-error -- dynamic table; org column exists on these 3 tables
+          (q) => q.eq("organization_id", TOSCANA_ORG_ID),
         )
         .take(BATCH);
       for (const row of rows) {
