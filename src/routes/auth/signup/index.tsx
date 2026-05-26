@@ -26,10 +26,10 @@ export const Route = createFileRoute("/auth/signup/")({
 });
 
 function SignupComponent() {
+  const { callbackUrl } = Route.useSearch();
   if (!DEMO_MODE) {
     return <Navigate to="/auth/signin" replace />;
   }
-  const { callbackUrl } = Route.useSearch();
   return (
     <div className="mx-auto w-full max-w-md py-12 lg:max-w-lg lg:py-16">
       <Card>
