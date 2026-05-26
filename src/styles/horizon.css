@@ -1,0 +1,37 @@
+/* BI Distributeur Premium POC — design tokens for Heritage-like density and palette.
+ * Mirrors PRD §5 design system. Consumed by primitives in src/components/heritage/. */
+
+:root {
+  --hz-bg-app: #e8e8e8;
+  --hz-bg-surface: #ffffff;
+  --hz-bg-toolbar: #d4d0c8;
+  --hz-border: #808080;
+  --hz-accent: #D7372C;
+  --hz-status-ok: #006400;
+  --hz-status-warning: #b8860b;
+  --hz-status-error: #8b0000;
+
+  --hz-gap-tight: 2px;
+  --hz-gap-default: 4px;
+  --hz-row-height: 22px;
+
+  --hz-font-ui: "Inter Variable", "Inter", system-ui, sans-serif;
+  --hz-font-mono: "Geist Mono", "Cascadia Code", Consolas, monospace;
+  --hz-font-size: 13px;
+}
+
+.hz-app {
+  font-family: var(--hz-font-ui);
+  font-size: var(--hz-font-size);
+  background: var(--hz-bg-app);
+  color: #111;
+}
+
+.hz-mono {
+  font-family: var(--hz-font-mono);
+}
+
+.hz-row {
+  height: var(--hz-row-height);
+  line-height: var(--hz-row-height);
+}

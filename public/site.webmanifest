@@ -1,0 +1,19 @@
+{
+  "name": "Defi",
+  "short_name": "Defi",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dttleawx6/image/upload/f_png,w_192,h_192,c_fit,q_auto/defi-erp/brand/illy-logo",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://res.cloudinary.com/dttleawx6/image/upload/f_png,w_512,h_512,c_fit,q_auto/defi-erp/brand/illy-logo",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#D7372C",
+  "background_color": "#050505",
+  "display": "standalone"
+}

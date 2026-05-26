@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <rect width="200" height="60" rx="8" fill="#050505"/>
+  <text x="20" y="38" font-family="Geist, system-ui, sans-serif" font-weight="700" font-size="22" fill="#fafafa">Toscana</text>
+  <circle cx="170" cy="30" r="8" fill="#D7372C"/>
+</svg>
