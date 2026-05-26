@@ -117,6 +117,7 @@ import type * as seeds_documents from "../seeds/documents.js";
 import type * as seeds_historicalFaker from "../seeds/historicalFaker.js";
 import type * as seeds_users from "../seeds/users.js";
 import type * as seeds_wipe from "../seeds/wipe.js";
+import type * as seeds_wipePaginated from "../seeds/wipePaginated.js";
 import type * as stock_movements_dto_stockMovement from "../stock_movements/dto/stockMovement.js";
 import type * as stock_movements_queries from "../stock_movements/queries.js";
 import type * as suppliers_dto_supplierSuggestion from "../suppliers/dto/supplierSuggestion.js";
@@ -254,6 +255,7 @@ declare const fullApi: ApiFromModules<{
   "seeds/historicalFaker": typeof seeds_historicalFaker;
   "seeds/users": typeof seeds_users;
   "seeds/wipe": typeof seeds_wipe;
+  "seeds/wipePaginated": typeof seeds_wipePaginated;
   "stock_movements/dto/stockMovement": typeof stock_movements_dto_stockMovement;
   "stock_movements/queries": typeof stock_movements_queries;
   "suppliers/dto/supplierSuggestion": typeof suppliers_dto_supplierSuggestion;

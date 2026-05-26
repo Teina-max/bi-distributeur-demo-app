@@ -38,8 +38,7 @@ function SignupComponent() {
           <Typography variant="muted" className="text-sm">
             Mode démo public. Aucun email d'activation envoyé — tout email
             valide est accepté et vous accédez direct au tenant{" "}
-            <code>toscana-beverages-demo</code> avec 17 ans de données
-            fictives.
+            <code>toscana-beverages-demo</code> avec 17 ans de données fictives.
           </Typography>
         </CardHeader>
         <CardContent>

@@ -20,20 +20,157 @@ type ClientType =
   | "Revendeur"
   | "Divers";
 
-const TYPES: readonly { type: ClientType; weight: number; prefixes: readonly string[] }[] = [
-  { type: "Pro-CHR", weight: 50, prefixes: ["RESTAURANT", "BRASSERIE", "BISTROT", "CAFE", "PIZZERIA", "BAR", "TAVERNE", "SNACK", "BAR TABAC", "AUBERGE", "CREPERIE", "GRILL"] },
-  { type: "Pro-Entreprise", weight: 25, prefixes: ["BUREAU", "ENTREPRISE", "STUDIO", "AGENCE", "CABINET", "ATELIER", "GARAGE AUTO", "PHARMACIE", "BANQUE", "ASSURANCE", "CONSULTING", "IMMOBILIER"] },
-  { type: "Pro-Collectivité", weight: 10, prefixes: ["MAIRIE", "ECOLE", "COLLEGE", "LYCEE", "CRECHE", "HOPITAL", "CLINIQUE", "EHPAD", "MJC", "BIBLIOTHEQUE"] },
-  { type: "Revendeur", weight: 8, prefixes: ["EPICERIE", "CAVE A VINS", "TRAITEUR", "BOULANGERIE", "MARCHE COUVERT", "DISTRIB AUTO"] },
+const TYPES: readonly {
+  type: ClientType;
+  weight: number;
+  prefixes: readonly string[];
+}[] = [
+  {
+    type: "Pro-CHR",
+    weight: 50,
+    prefixes: [
+      "RESTAURANT",
+      "BRASSERIE",
+      "BISTROT",
+      "CAFE",
+      "PIZZERIA",
+      "BAR",
+      "TAVERNE",
+      "SNACK",
+      "BAR TABAC",
+      "AUBERGE",
+      "CREPERIE",
+      "GRILL",
+    ],
+  },
+  {
+    type: "Pro-Entreprise",
+    weight: 25,
+    prefixes: [
+      "BUREAU",
+      "ENTREPRISE",
+      "STUDIO",
+      "AGENCE",
+      "CABINET",
+      "ATELIER",
+      "GARAGE AUTO",
+      "PHARMACIE",
+      "BANQUE",
+      "ASSURANCE",
+      "CONSULTING",
+      "IMMOBILIER",
+    ],
+  },
+  {
+    type: "Pro-Collectivité",
+    weight: 10,
+    prefixes: [
+      "MAIRIE",
+      "ECOLE",
+      "COLLEGE",
+      "LYCEE",
+      "CRECHE",
+      "HOPITAL",
+      "CLINIQUE",
+      "EHPAD",
+      "MJC",
+      "BIBLIOTHEQUE",
+    ],
+  },
+  {
+    type: "Revendeur",
+    weight: 8,
+    prefixes: [
+      "EPICERIE",
+      "CAVE A VINS",
+      "TRAITEUR",
+      "BOULANGERIE",
+      "MARCHE COUVERT",
+      "DISTRIB AUTO",
+    ],
+  },
   { type: "Particulier", weight: 5, prefixes: ["M.", "Mme", "Famille"] },
-  { type: "Divers", weight: 2, prefixes: ["ASSOCIATION", "COMITE", "CLUB SPORTIF", "COPROPRIETE"] },
+  {
+    type: "Divers",
+    weight: 2,
+    prefixes: ["ASSOCIATION", "COMITE", "CLUB SPORTIF", "COPROPRIETE"],
+  },
 ];
 
-const SECOND_WORDS = ["DU PORT", "DU MARCHE", "DU CENTRE", "DE LA PLAGE", "DE LA TERRASSE", "DE LA PLACE", "DU VIEUX MOULIN", "DU CIGALON", "DES OLIVIERS", "DES MIMOSAS", "DE LA FONTAINE", "BELLA VISTA", "MEDITERRANEE", "PROVENCALE", "DU SUD", "MARITIME", "DE L'OURS", "DU SOLEIL", "DES ARTISTES", "DU LAVANDIN", "PALMIER", "DES PINS", "DE L'OLIVIER", "DU CYPRES", "DES FLAMANTS", "DE L'AZUR"];
+const SECOND_WORDS = [
+  "DU PORT",
+  "DU MARCHE",
+  "DU CENTRE",
+  "DE LA PLAGE",
+  "DE LA TERRASSE",
+  "DE LA PLACE",
+  "DU VIEUX MOULIN",
+  "DU CIGALON",
+  "DES OLIVIERS",
+  "DES MIMOSAS",
+  "DE LA FONTAINE",
+  "BELLA VISTA",
+  "MEDITERRANEE",
+  "PROVENCALE",
+  "DU SUD",
+  "MARITIME",
+  "DE L'OURS",
+  "DU SOLEIL",
+  "DES ARTISTES",
+  "DU LAVANDIN",
+  "PALMIER",
+  "DES PINS",
+  "DE L'OLIVIER",
+  "DU CYPRES",
+  "DES FLAMANTS",
+  "DE L'AZUR",
+];
 
-const FAMILY_NAMES = ["MARTIN", "BERNARD", "ROUSSEAU", "MOREAU", "LAURENT", "GIRARD", "ROUX", "BONNET", "GARCIA", "LOPEZ", "DELORME", "CHEVALIER", "FRANCOIS", "FAURE", "FONTAINE", "MERCIER", "GUILLAUME", "VERDIER", "TURGEON", "BERTOLINI"];
+const FAMILY_NAMES = [
+  "MARTIN",
+  "BERNARD",
+  "ROUSSEAU",
+  "MOREAU",
+  "LAURENT",
+  "GIRARD",
+  "ROUX",
+  "BONNET",
+  "GARCIA",
+  "LOPEZ",
+  "DELORME",
+  "CHEVALIER",
+  "FRANCOIS",
+  "FAURE",
+  "FONTAINE",
+  "MERCIER",
+  "GUILLAUME",
+  "VERDIER",
+  "TURGEON",
+  "BERTOLINI",
+];
 
-const FIRST_NAMES = ["Marc", "Sophie", "Jean", "Catherine", "Laurent", "Isabelle", "Stéphane", "Nathalie", "Eric", "Sandrine", "Frédéric", "Christine", "Olivier", "Patricia", "Philippe", "Anne", "Daniel", "Sylvie", "Bruno", "Caroline"];
+const FIRST_NAMES = [
+  "Marc",
+  "Sophie",
+  "Jean",
+  "Catherine",
+  "Laurent",
+  "Isabelle",
+  "Stéphane",
+  "Nathalie",
+  "Eric",
+  "Sandrine",
+  "Frédéric",
+  "Christine",
+  "Olivier",
+  "Patricia",
+  "Philippe",
+  "Anne",
+  "Daniel",
+  "Sylvie",
+  "Bruno",
+  "Caroline",
+];
 
 const CITIES: readonly { name: string; cp: string; weight: number }[] = [
   { name: "Nice", cp: "06000", weight: 22 },
@@ -51,7 +188,28 @@ const CITIES: readonly { name: string; cp: string; weight: number }[] = [
   { name: "Lavandou", cp: "83980", weight: 3 },
 ];
 
-const STREETS = ["Rue de la République", "Avenue des Mimosas", "Boulevard du Littoral", "Place Garibaldi", "Rue Saint-François-de-Paule", "Avenue Jean Médecin", "Promenade des Anglais", "Quai Lunel", "Rue Masséna", "Cours Saleya", "Avenue Albert 1er", "Rue Hôtel des Postes", "Rue de France", "Avenue de Verdun", "Place Massena", "Rue Pastorelli", "Avenue Borriglione", "Boulevard Carnot", "Rue Cassini", "Avenue Cyrille Besset"];
+const STREETS = [
+  "Rue de la République",
+  "Avenue des Mimosas",
+  "Boulevard du Littoral",
+  "Place Garibaldi",
+  "Rue Saint-François-de-Paule",
+  "Avenue Jean Médecin",
+  "Promenade des Anglais",
+  "Quai Lunel",
+  "Rue Masséna",
+  "Cours Saleya",
+  "Avenue Albert 1er",
+  "Rue Hôtel des Postes",
+  "Rue de France",
+  "Avenue de Verdun",
+  "Place Massena",
+  "Rue Pastorelli",
+  "Avenue Borriglione",
+  "Boulevard Carnot",
+  "Rue Cassini",
+  "Avenue Cyrille Besset",
+];
 
 const seededRandom = (seed: number) => {
   let s = seed;
@@ -89,14 +247,33 @@ const buildEmail = (name: string, rng: () => number): string | null => {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .slice(0, 30);
-  const tlds = ["fr", "com", "fr", "fr", "wanadoo.fr", "orange.fr", "free.fr", "gmail.com"];
+  const tlds = [
+    "fr",
+    "com",
+    "fr",
+    "fr",
+    "wanadoo.fr",
+    "orange.fr",
+    "free.fr",
+    "gmail.com",
+  ];
   const tld = randChoice(rng, tlds);
   if (tld.includes("@")) return `${slug}@${tld}`;
-  const handles = ["contact", "info", slug.split("-")[0]!, "accueil", "direction"];
+  const handles = [
+    "contact",
+    "info",
+    slug.split("-")[0]!,
+    "accueil",
+    "direction",
+  ];
   return `${randChoice(rng, handles)}@${slug}.${tld.includes(".") ? tld : tld}`;
 };
 
-const PAYMENT_TERMS: readonly { days: number; label: string; weight: number }[] = [
+const PAYMENT_TERMS: readonly {
+  days: number;
+  label: string;
+  weight: number;
+}[] = [
   { days: 0, label: "Comptant", weight: 25 },
   { days: 15, label: "15j net", weight: 20 },
   { days: 30, label: "30j net", weight: 35 },
