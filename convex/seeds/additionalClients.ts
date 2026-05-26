@@ -7,6 +7,7 @@
  * NOT protected by auth — POC seed only.
  */
 
+/* eslint-disable no-await-in-loop, @typescript-eslint/no-non-null-assertion -- sequential inserts + small array index access */
 import { mutation } from "../_generated/server";
 import { TOSCANA_ORG_ID } from "./users";
 import { buildSearchTokens } from "../utils/searchTokens";
@@ -78,17 +79,6 @@ const randWeighted = <T extends { weight: number }>(
 
 const randChoice = <T>(rng: () => number, arr: readonly T[]): T =>
   arr[Math.floor(rng() * arr.length)]!;
-
-const buildPhone = (rng: () => number) => {
-  const ab = String(randInt(rng, 10, 99));
-  const cd = String(randInt(rng, 10, 99));
-  const ef = String(randInt(rng, 10, 99));
-  const gh = String(randInt(rng, 10, 99));
-  return `+33 4 93 ${ab} ${cd} ${ef}${gh.slice(0, 0) ? "" : ""}`.replace(
-    / \d+$/,
-    " " + ab + " " + cd + " " + ef + " " + gh,
-  );
-};
 
 const buildEmail = (name: string, rng: () => number): string | null => {
   if (rng() < 0.3) return null;

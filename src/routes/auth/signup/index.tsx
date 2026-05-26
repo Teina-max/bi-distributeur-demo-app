@@ -22,34 +22,36 @@ export const Route = createFileRoute("/auth/signup/")({
       },
     ],
   }),
-  component: () => {
-    if (!DEMO_MODE) {
-      return <Navigate to="/auth/signin" replace />;
-    }
-    const { callbackUrl } = Route.useSearch();
-    return (
-      <div className="mx-auto w-full max-w-md py-12 lg:max-w-lg lg:py-16">
-        <Card>
-          <CardHeader>
-            <CardTitle>Créer un compte demo</CardTitle>
-            <Typography variant="muted" className="text-sm">
-              Mode démo public. Aucun email d'activation envoyé — tout email
-              valide est accepté et vous accédez direct au tenant{" "}
-              <code>toscana-beverages-demo</code> avec 17 ans de données
-              fictives.
-            </Typography>
-          </CardHeader>
-          <CardContent>
-            <SignUpCredentialsForm callbackUrl={callbackUrl ?? "/app"} />
-            <Typography variant="muted" className="mt-4 text-xs">
-              Déjà un compte ?{" "}
-              <Link to="/auth/signin" className="underline">
-                Se connecter
-              </Link>
-            </Typography>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  },
+  component: SignupComponent,
 });
+
+function SignupComponent() {
+  if (!DEMO_MODE) {
+    return <Navigate to="/auth/signin" replace />;
+  }
+  const { callbackUrl } = Route.useSearch();
+  return (
+    <div className="mx-auto w-full max-w-md py-12 lg:max-w-lg lg:py-16">
+      <Card>
+        <CardHeader>
+          <CardTitle>Créer un compte demo</CardTitle>
+          <Typography variant="muted" className="text-sm">
+            Mode démo public. Aucun email d'activation envoyé — tout email
+            valide est accepté et vous accédez direct au tenant{" "}
+            <code>toscana-beverages-demo</code> avec 17 ans de données
+            fictives.
+          </Typography>
+        </CardHeader>
+        <CardContent>
+          <SignUpCredentialsForm callbackUrl={callbackUrl ?? "/app"} />
+          <Typography variant="muted" className="mt-4 text-xs">
+            Déjà un compte ?{" "}
+            <Link to="/auth/signin" className="underline">
+              Se connecter
+            </Link>
+          </Typography>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
