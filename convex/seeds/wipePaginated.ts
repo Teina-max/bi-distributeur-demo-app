@@ -37,7 +37,10 @@ type TableName =
  */
 export const deleteBatch = internalMutation({
   args: { table: v.string() },
-  handler: async (ctx, { table }): Promise<{ deleted: number; hasMore: boolean }> => {
+  handler: async (
+    ctx,
+    { table },
+  ): Promise<{ deleted: number; hasMore: boolean }> => {
     if (table === "ticket_messages") {
       // ticket_messages is indexed by ticket, not org → scan via tickets first
       const tickets = await ctx.db
@@ -50,7 +53,9 @@ export const deleteBatch = internalMutation({
       for (const ticket of tickets) {
         const messages = await ctx.db
           .query("ticket_messages")
-          .withIndex("by_ticket_and_creation", (q) => q.eq("ticket_id", ticket._id))
+          .withIndex("by_ticket_and_creation", (q) =>
+            q.eq("ticket_id", ticket._id),
+          )
           .take(BATCH);
         for (const m of messages) {
           await ctx.db.delete(m._id);
@@ -149,9 +154,12 @@ export const wipeAllPaginatedPublic = action({
       let tableTotal = 0;
       let safety = 100; // ceiling: 100 batches × 500 = 50k rows / table
       while (safety > 0) {
-        const result = await ctx.runMutation(internal.seeds.wipePaginated.deleteBatch, {
-          table,
-        });
+        const result = await ctx.runMutation(
+          internal.seeds.wipePaginated.deleteBatch,
+          {
+            table,
+          },
+        );
         tableTotal += result.deleted;
         if (!result.hasMore) break;
         safety -= 1;
